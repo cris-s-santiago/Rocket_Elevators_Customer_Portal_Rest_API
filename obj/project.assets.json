@@ -7373,19 +7373,21 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Odyssey\\Week9\\Rocket-Elevators-Foundation-Rest-API\\RestAPI.csproj",
+      "projectUniqueName": "C:\\Odyssey\\Week11\\Rocket_Elevators_Customer_Portal_Rest_API\\RestAPI.csproj",
       "projectName": "RestAPI",
-      "projectPath": "C:\\Odyssey\\Week9\\Rocket-Elevators-Foundation-Rest-API\\RestAPI.csproj",
+      "projectPath": "C:\\Odyssey\\Week11\\Rocket_Elevators_Customer_Portal_Rest_API\\RestAPI.csproj",
       "packagesPath": "C:\\Users\\criss\\.nuget\\packages\\",
-      "outputPath": "C:\\Odyssey\\Week9\\Rocket-Elevators-Foundation-Rest-API\\obj\\",
+      "outputPath": "C:\\Odyssey\\Week11\\Rocket_Elevators_Customer_Portal_Rest_API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\criss\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\criss\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -7447,7 +7449,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

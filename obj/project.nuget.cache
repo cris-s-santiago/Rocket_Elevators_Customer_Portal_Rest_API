@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UirevPMN5o2zKq1w2jhCCdmjNTiXuEcxEgBHR0C/dyK5JETCnHS/xVomRNJeC6lOTBY9lTrKVMxnE23D3XgN8A==",
+  "dgSpecHash": "R80Q/GDaAW8LbOHDH/QMjByVXxAJEP5hJ57nK5ubZEtIu/bgReojiNF80Nq2XCi9viOwCFibE/Zz7KpRUeXC1w==",
   "success": true,
-  "projectFilePath": "C:\\Odyssey\\Week9\\Rocket-Elevators-Foundation-Rest-API\\RestAPI.csproj",
+  "projectFilePath": "C:\\Odyssey\\Week11\\Rocket_Elevators_Customer_Portal_Rest_API\\RestAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\criss\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\criss\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
