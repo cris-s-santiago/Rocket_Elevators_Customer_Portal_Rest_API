@@ -20,6 +20,7 @@ namespace RestAPI
 {
     public class Startup
     {
+        private const Newtonsoft.Json.ReferenceLoopHandling ignore = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -54,9 +55,10 @@ namespace RestAPI
                     // .EnableDetailedErrors();
             );
 
-            services.AddMvc();
-
-                // "server=localhost;database=myapp_development;uid=root;password=Pa$$w0rd!",
+            services.AddMvc().AddNewtonsoftJson(setupAction: options =>
+            {
+                options.SerializerSettings.ReferenceLoopHandling = ignore;
+            });
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

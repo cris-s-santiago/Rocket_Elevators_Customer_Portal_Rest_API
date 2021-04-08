@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 public class Building
 {
     public long id { get; set; }
@@ -12,4 +13,6 @@ public class Building
     public DateTime updated_at { get; set; }
     public long? customer_id { get; set; }
     public long? address_id { get; set; }
+    public virtual ICollection<Battery> Batteries { get; set;}
+    public  Customer Customer { get; set; }
 }

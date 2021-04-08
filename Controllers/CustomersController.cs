@@ -27,9 +27,11 @@ namespace RestAPI.Controllers
             return await _context.customers.ToListAsync();
         }
 
-        // GET: api/Customers/email
+//------------------------------ Retrieving just Info of Customer using the e-mail -------------------------------\\
+
+        //GET: api/Customers/email
         [HttpGet("{email}")]
-        public object GetCustomer(string email)
+        public object GetEmailCustomer(string email)
         {
             var customer = _context.customers.Where(e=>e.email_of_company_contact == email);
 
@@ -40,7 +42,25 @@ namespace RestAPI.Controllers
 
             return customer;
         }
-        
+
+//--------- Retrieving all Info of Customer (Building, Battery, Columns and Elevators) using the e-mail ---------\\
+
+        //GET: api/Customers/FullInfo/email
+        [HttpGet("FullInfo/{email}")]
+        public async Task<ActionResult<Customer>> GetCustomer(string email)
+        {
+            
+            var customer = await _context.customers.Include("Buildings.Batteries.Columns.Elevators")
+                                                    .Where(c => c.email_of_company_contact == email)
+                                                    .FirstOrDefaultAsync();                     
+
+            if (customer == null)
+            {
+                return NotFound();
+            }
+
+            return customer;
+        }        
 
         // PUT: api/Customers/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
