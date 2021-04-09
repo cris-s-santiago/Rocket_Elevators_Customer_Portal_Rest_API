@@ -34,14 +34,12 @@ namespace RestAPI
         {
 
             //services.AddCors();
-            services.AddCors(options =>
-        {
-            options.AddPolicy(name: MyAllowSpecificOrigins,
-                              builder =>
-                              {
-                                  builder.WithOrigins("https://localhost:44310");
-                              });
-        });
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+            }));
                     
             // var databaseConnection = "databaseConnectionString";
             
@@ -85,7 +83,7 @@ namespace RestAPI
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "RestAPI v1"));
             }
-            app.UseCors(MyAllowSpecificOrigins);
+            app.UseCors("MyPolicy");
 
             app.UseHttpsRedirection();
 

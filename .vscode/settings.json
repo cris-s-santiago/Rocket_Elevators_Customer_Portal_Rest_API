@@ -1,4 +1,3 @@
 {
-    "appService.deploySubpath": "publish",
-    "appService.defaultWebAppToDeploy": "/subscriptions/64bba7c8-aecf-4bf0-ac1b-1551e656fa48/resourceGroups/Rocket_Elevators/providers/Microsoft.Web/sites/rocket-Elevators"
+    "appService.deploySubpath": "publish"
 }
