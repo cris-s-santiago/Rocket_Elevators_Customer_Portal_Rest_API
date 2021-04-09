@@ -113,6 +113,24 @@ namespace RestAPI.Controllers
             return NoContent();
         }
 
+//----------------------------------------------- Create a new intervention ------------------------------------------------\\
+
+        // POST: api/Interventions
+        [HttpPost]
+        public async Task<ActionResult<Intervention>> PostIntervention(Intervention newIntervention)
+        {
+            newIntervention.start_date_intervention = DateTime.Now;
+            newIntervention.updated_at = DateTime.Now;
+            newIntervention.status = "InProgress";
+            newIntervention.result = "Incomplete";
+            newIntervention.employee_id = null;
+
+            _context.interventions.Add(newIntervention);
+            await _context.SaveChangesAsync();
+
+            return newIntervention;
+        }
+
 
         private bool InterventionExists(long id)
         {
