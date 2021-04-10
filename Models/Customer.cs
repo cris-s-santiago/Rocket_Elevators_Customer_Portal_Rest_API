@@ -3,15 +3,15 @@ using System.Collections.Generic;
 public class Customer
 {
     public long id { get; set; }
-    public DateTime? customers_creation_date { get; set; }
+    public DateTime? date_create { get; set; }
     public string company_name { get; set; }
-    public string full_name_of_company_contact { get; set; }
-    public string company_contact_phone { get; set; }
-    public string email_of_company_contact { get; set; }
-    public string company_description { get; set; }
-    public string full_name_of_service_technical_authority { get; set; }
-    public string technical_authority_phone_for_service_ { get; set; }
-    public string technical_manager_email_for_service { get; set; }
+    public string cpy_contact_full_name { get; set; }
+    public string cpy_contact_phone { get; set; }
+    public string cpy_contact_email { get; set; }
+    public string cpy_description { get; set; }
+    public string tech_authority_service_full_name { get; set; }
+    public string tech_authority_service_phone { get; set; }
+    public string tech_manager_service_email { get; set; }
     public DateTime created_at { get; set; }
     public DateTime updated_at { get; set; }
     public long? user_id { get; set; }

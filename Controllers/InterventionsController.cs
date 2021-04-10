@@ -38,7 +38,7 @@ namespace RestAPI.Controllers
         {
             return _context.interventions
                         .Where(intervention => intervention.status == "Pending" 
-                            && intervention.start_date_intervention == null);            
+                            && intervention.start_date_time_intervention == null);            
         }
 
 
@@ -56,7 +56,7 @@ namespace RestAPI.Controllers
 
             Intervention interventionFound = await _context.interventions.FindAsync(id);
             interventionFound.status = intervention.status;            
-            interventionFound.start_date_intervention = DateTime.Now;
+            interventionFound.start_date_time_intervention = DateTime.Now;
 
             try
             {
@@ -92,7 +92,7 @@ namespace RestAPI.Controllers
 
             Intervention interventionFound = await _context.interventions.FindAsync(id);
             interventionFound.status = intervention.status;            
-            interventionFound.end_date_intervention = DateTime.Now;
+            interventionFound.end_date_time_intervention = DateTime.Now;
 
             try
             {

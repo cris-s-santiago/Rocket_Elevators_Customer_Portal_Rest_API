@@ -3,8 +3,8 @@ using System.Collections.Generic;
 public class Column
 {
     public long id { get; set; }
-    public string building_type {get; set; }
-    public long? number_of_floors_served {get; set; }
+    public string type_building {get; set; }
+    public long? number_floors_served {get; set; }
     public string status { get; set; }
     public string information { get; set; }
     public string notes { get; set; }

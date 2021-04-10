@@ -33,7 +33,7 @@ namespace RestAPI.Controllers
         [HttpGet("{email}")]
         public object GetEmailCustomer(string email)
         {
-            var customer = _context.customers.Where(e=>e.email_of_company_contact == email);
+            var customer = _context.customers.Where(e=>e.cpy_contact_email == email);
 
             if (customer == null)
             {
@@ -51,7 +51,7 @@ namespace RestAPI.Controllers
         {
             
             var customer = await _context.customers.Include("Buildings.Batteries.Columns.Elevators")
-                                                    .Where(c => c.email_of_company_contact == email)
+                                                    .Where(c => c.cpy_contact_email == email)
                                                     .FirstOrDefaultAsync();                     
 
             if (customer == null)
