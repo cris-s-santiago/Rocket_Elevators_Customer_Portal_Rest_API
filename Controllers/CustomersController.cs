@@ -60,38 +60,36 @@ namespace RestAPI.Controllers
             }
 
             return customer;
-        }        
+        } 
 
-        // PUT: api/Customers/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutCustomer(long id, Customer customer)
+//--------------------------------------------------- Update Customer ---------------------------------------------------------------\\       
+
+        // PUT: api/Customers/email
+        [HttpPut]
+        public async Task<ActionResult<Customer>> PutCustomer(Customer customer)
         {
-            if (id != customer.id)
+            var customerToUpdate = await _context.customers
+                                                .Where(c => c.email_of_company_contact == customer.email_of_company_contact)
+                                                .FirstOrDefaultAsync(); 
+
+            if (customerToUpdate == null)
             {
-                return BadRequest();
+                return NotFound();
             }
 
-            _context.Entry(customer).State = EntityState.Modified;
+            customerToUpdate.company_name = customer.company_name;
+            customerToUpdate.full_name_of_company_contact = customer.full_name_of_company_contact;
+            customerToUpdate.company_contact_phone = customer.company_contact_phone;
+            customerToUpdate.email_of_company_contact = customer.email_of_company_contact;
+            customerToUpdate.company_description = customer.company_description;
+            customerToUpdate.full_name_of_service_technical_authority = customer.full_name_of_service_technical_authority;
+            customerToUpdate.technical_authority_phone_for_service_ = customer.technical_authority_phone_for_service_;
+            customerToUpdate.technical_manager_email_for_service = customer.technical_manager_email_for_service;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!CustomerExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            await _context.SaveChangesAsync();
 
             return NoContent();
-        }       
+        }     
 
         private bool CustomerExists(long id)
         {
