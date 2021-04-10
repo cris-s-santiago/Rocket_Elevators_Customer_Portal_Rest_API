@@ -1,4 +1,5 @@
 C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\publish\RestAPI.exe
+C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\publish\publish\publish\publish\publish\publish\web.config
 C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\publish\publish\publish\publish\publish\web.config
 C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\publish\publish\publish\publish\web.config
 C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\publish\publish\publish\web.config
@@ -13,6 +14,10 @@ C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\publish\publish\publ
 C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\publish\publish\publish\publish\appsettings.json
 C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\publish\publish\publish\publish\publish\appsettings.Development.json
 C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\publish\publish\publish\publish\publish\appsettings.json
+C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\publish\publish\publish\publish\publish\publish\appsettings.Development.json
+C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\publish\publish\publish\publish\publish\publish\appsettings.json
+C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\publish\publish\publish\publish\publish\publish\RestAPI.deps.json
+C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\publish\publish\publish\publish\publish\publish\RestAPI.runtimeconfig.json
 C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\publish\publish\publish\publish\publish\RestAPI.deps.json
 C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\publish\publish\publish\publish\publish\RestAPI.runtimeconfig.json
 C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\publish\publish\publish\publish\RestAPI.deps.json

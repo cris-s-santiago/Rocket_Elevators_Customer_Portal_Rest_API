@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "J5B2jyoxbaM81JfSf30CYmPWTMG1Twl7XIZNooWvsfejv7s7GVsGgNjQ6N1IKOhI4w4Jp9phZY9WoAoKuMmk6g==",
+  "dgSpecHash": "fbeoR0qhK+lQIO/5fNLwNTCIGj9nTJHBlQEVvSq8XGxUgbJ+CYHoqIMB/Qy3JDOBtRKZI3CNzuDVdCxZykirvQ==",
   "success": true,
   "projectFilePath": "C:\\Odyssey\\Week11\\Rocket_Elevators_Customer_Portal_Rest_API\\RestAPI.csproj",
   "expectedPackageFiles": [
@@ -57,7 +57,7 @@
     "C:\\Users\\criss\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\criss\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\criss\\.nuget\\packages\\mysqlconnector\\1.1.0\\mysqlconnector.1.1.0.nupkg.sha512",
-    "C:\\Users\\criss\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\criss\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\criss\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\criss\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\5.0.0-alpha.2\\pomelo.entityframeworkcore.mysql.5.0.0-alpha.2.nupkg.sha512",
     "C:\\Users\\criss\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
