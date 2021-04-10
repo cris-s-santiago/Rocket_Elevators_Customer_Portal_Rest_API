@@ -3,6 +3,7 @@ public class Intervention
 {
     public long id { get; set; }
     public long? author {get; set; }
+    public string author_type {get; set; }
     public long? customer_id { get; set; }
     public long? building_id {get; set; }
     public long? battery_id { get; set; }  
