@@ -584,3 +584,13 @@ C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\obj\Debug\net5.0\Res
 C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\bin\Debug\net5.0\publish\publish\publish\publish\publish\publish\web.config
+C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\bin\Debug\net5.0\publish\publish\publish\publish\publish\web.config
+C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\bin\Debug\net5.0\publish\publish\publish\publish\publish\appsettings.Development.json
+C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\bin\Debug\net5.0\publish\publish\publish\publish\publish\appsettings.json
+C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\bin\Debug\net5.0\publish\publish\publish\publish\publish\publish\appsettings.Development.json
+C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\bin\Debug\net5.0\publish\publish\publish\publish\publish\publish\appsettings.json
+C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\bin\Debug\net5.0\publish\publish\publish\publish\publish\publish\RestAPI.deps.json
+C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\bin\Debug\net5.0\publish\publish\publish\publish\publish\publish\RestAPI.runtimeconfig.json
+C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\bin\Debug\net5.0\publish\publish\publish\publish\publish\RestAPI.deps.json
+C:\Odyssey\Week11\Rocket_Elevators_Customer_Portal_Rest_API\bin\Debug\net5.0\publish\publish\publish\publish\publish\RestAPI.runtimeconfig.json

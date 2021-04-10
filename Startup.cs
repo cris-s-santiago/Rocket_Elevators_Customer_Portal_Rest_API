@@ -20,8 +20,6 @@ namespace RestAPI
 {
     public class Startup
     {
-        private const Newtonsoft.Json.ReferenceLoopHandling ignore = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
-        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -32,18 +30,12 @@ namespace RestAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            //services.AddCors();
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
                 builder.AllowAnyOrigin()
                     .AllowAnyMethod()
                     .AllowAnyHeader();
             }));
-                    
-            // var databaseConnection = "databaseConnectionString";
-            
-            // string value = ConfigurationManager.ConnectionStrings[databaseConnection].ConnectionString;
 
             services.AddDbContext<RestAPIContext>(options =>
                 options.UseMySql(                    
@@ -57,15 +49,9 @@ namespace RestAPI
                     new MySqlServerVersion(new Version(8, 0, 21)),
                         mySqlOptions => mySqlOptions
                             .CharSetBehavior(CharSetBehavior.NeverAppend))
-                    // Everything from this point on is optional but helps with debugging.
-                    // .EnableSensitiveDataLogging()
-                    // .EnableDetailedErrors();
             );
 
-            services.AddMvc().AddNewtonsoftJson(setupAction: options =>
-            {
-                options.SerializerSettings.ReferenceLoopHandling = ignore;
-            });
+            services.AddMvc();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
