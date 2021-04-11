@@ -16,5 +16,8 @@ public class Customer
     public DateTime updated_at { get; set; }
     public long? user_id { get; set; }
     public long? address_id { get; set; }
-    public virtual ICollection<Building> Buildings { get; set; }
+    
+    //[System.Text.Json.Serialization.JsonIgnore]
+    //public  Address Address { get; set;}
+    //public virtual ICollection<Building> Buildings { get; set; }
 }

@@ -35,27 +35,27 @@ namespace RestAPI.Models
                 modelBuilder.Entity<Customer>()  // New - for customers
                 .HasKey(x => x.id);
 
-                // modelBuilder.Entity<Address>()  // New - for addresses
-                // .HasKey(x => x.id);
+                modelBuilder.Entity<Address>()  // New - for addresses
+                .HasKey(x => x.id);
 
                 
-                modelBuilder.Entity<Customer>()
-                .HasMany(x => x.Buildings) //customer has_many :buildings
-                .WithOne( y => y.Customer)
-                .HasForeignKey(z => z.customer_id);
+                // modelBuilder.Entity<Customer>()
+                // .HasMany(x => x.Buildings) //customer has_many :buildings
+                // .WithOne( y => y.Customer)
+                // .HasForeignKey(z => z.customer_id);
                 
                 modelBuilder.Entity<Building>()
                 .HasMany(x => x.Batteries) //building has_many    :batteries
                 .WithOne( y => y.Building)
                 .HasForeignKey(z => z.building_id);                
                 
-                // modelBuilder.Entity<Building>()
+                // modelBuilder.Entity<Customer>()
                 // .HasOne(x => x.Address) //building belongs_to    :addresses
-                // .WithOne( y => y.Building)
-                // .HasForeignKey(z => z.building_id); 
+                // .WithOne( y => y.Customer)
+                // .HasForeignKey(z => z.address_id); 
 
                 // modelBuilder.Entity<Address>()
-                // .HasOne(x => x.Building) //building belongs_to    :addresses
+                // .HasOne(x => x.Customer) //building belongs_to    :addresses
                 // .WithOne( y => y.Address)
                 // .HasForeignKey(z => z.address_id);
                 
@@ -87,5 +87,6 @@ namespace RestAPI.Models
         public DbSet<Lead> leads { get; set; }
         public DbSet<Customer> customers { get; set; }
         public DbSet<Intervention> interventions { get; set; }
+        public DbSet<Address> addresses { get; set; }
     }
 }
