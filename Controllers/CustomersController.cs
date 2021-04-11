@@ -62,26 +62,6 @@ namespace RestAPI.Controllers
             return customer;
         } 
 
-
-//------------------------ Retrieving Address Info of Customer  --------------------------\\
-
-        //GET: api/Customers/Address/email
-        [HttpGet("Address/{email}")]
-        public async Task<ActionResult<Customer>> GetCustomerAddress(string email)
-        {
-            
-            var customer = await _context.customers.Include("Buildings.Batteries.Columns.Elevators")
-                                                    .Where(c => c.email_of_company_contact == email)
-                                                    .FirstOrDefaultAsync();                     
-
-            if (customer == null)
-            {
-                return NotFound();
-            }
-
-            return customer;
-        } 
-
 //--------------------------------------------------- Update Customer ---------------------------------------------------------------\\       
 
         // PUT: api/Customers

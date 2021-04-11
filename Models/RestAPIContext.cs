@@ -12,7 +12,6 @@ namespace RestAPI.Models
          protected override void OnModelCreating(ModelBuilder modelBuilder)
             {
                 base.OnModelCreating(modelBuilder);
-    /////////This is where relations between tables in DB are specified
                
                 modelBuilder.Entity<Building>()
                 .HasKey(b => b.id);
@@ -29,53 +28,40 @@ namespace RestAPI.Models
                 modelBuilder.Entity<Lead>()
                 .HasKey(x => x.id);
 
-                modelBuilder.Entity<Intervention>()  // New - for intervention
+                modelBuilder.Entity<Intervention>()
                 .HasKey(x => x.id);
 
-                modelBuilder.Entity<Customer>()  // New - for customers
-                .HasKey(x => x.id);
-
-                modelBuilder.Entity<Address>()  // New - for addresses
+                modelBuilder.Entity<Customer>() 
                 .HasKey(x => x.id);
 
                 
-                // modelBuilder.Entity<Customer>()
-                // .HasMany(x => x.Buildings) //customer has_many :buildings
-                // .WithOne( y => y.Customer)
-                // .HasForeignKey(z => z.customer_id);
+                modelBuilder.Entity<Customer>()
+                .HasMany(x => x.Buildings)
+                .WithOne( y => y.Customer)
+                .HasForeignKey(z => z.customer_id);
                 
                 modelBuilder.Entity<Building>()
-                .HasMany(x => x.Batteries) //building has_many    :batteries
+                .HasMany(x => x.Batteries) 
                 .WithOne( y => y.Building)
-                .HasForeignKey(z => z.building_id);                
-                
-                // modelBuilder.Entity<Customer>()
-                // .HasOne(x => x.Address) //building belongs_to    :addresses
-                // .WithOne( y => y.Customer)
-                // .HasForeignKey(z => z.address_id); 
-
-                // modelBuilder.Entity<Address>()
-                // .HasOne(x => x.Customer) //building belongs_to    :addresses
-                // .WithOne( y => y.Address)
-                // .HasForeignKey(z => z.address_id);
+                .HasForeignKey(z => z.building_id);
                 
                 modelBuilder.Entity<Battery>()
-                .HasMany(x => x.Columns) //battery has_many :columns
+                .HasMany(x => x.Columns)
                 .WithOne(y => y.Battery)
                 .HasForeignKey(z => z.battery_id);                
 
                 modelBuilder.Entity<Column>() 
-                .HasOne(x => x.Battery) //column belongs_to  :battery
+                .HasOne(x => x.Battery)
                 .WithMany(y => y.Columns)
                 .HasForeignKey(z => z.battery_id);
 
                 modelBuilder.Entity<Column>() 
-                .HasMany(x => x.Elevators) //column has_many    :elevators
+                .HasMany(x => x.Elevators)
                 .WithOne(y => y.Column)
                 .HasForeignKey(z => z.column_id);
 
                 modelBuilder.Entity<Elevator>() 
-                .HasOne(x => x.Column) //elevator belongs_to :column
+                .HasOne(x => x.Column)
                 .WithMany(y => y.Elevators)
                 .HasForeignKey(z => z.column_id);                
             }

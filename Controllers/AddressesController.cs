@@ -27,6 +27,7 @@ namespace RestAPI.Controllers
             return await _context.addresses.ToListAsync();
         }
 
+//----------------------------------- Retrieving all information from a specific Address -----------------------------------\\
         // GET: api/Addresses/id
         [HttpGet("{id}")]
         public async Task<ActionResult<Address>> GetAddress(long id)
@@ -40,6 +41,8 @@ namespace RestAPI.Controllers
 
             return address;
         }
+
+//----------------------------------- Update information from a specific Address -----------------------------------\\
 
         // PUT: api/Addresses
         [HttpPut]
