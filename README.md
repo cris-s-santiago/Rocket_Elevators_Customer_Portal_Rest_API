@@ -72,5 +72,5 @@ This week deliverables:
 
 -----------------------------------------------------------------------------------------------
 
-# Rocket Elevators Rest API <img src="wwwroot/images/logo1.png" align="right" alt="Rocket Elevators logo" width="" height="100">
+# Rocket Elevators Rest API
 -----------------------------------------------------------------------------------------------
